@@ -35,40 +35,21 @@
       color: #4ade80;
     }
 
-    /* Efecto Blinking WhatsApp */
     .btn-whatsapp {
       animation: blink-strong 1.5s infinite;
     }
-
     @keyframes blink-strong {
-      0%, 100% {
-        color: white;
-        background-color: #25D366;
-      }
-      50% {
-        color: #86efac;
-        background-color: #15803d;
-      }
+      0%, 100% { color: white; background-color: #25D366; }
+      50% { color: #86efac; background-color: #15803d; }
     }
 
     /* Carrusel Horizontal */
-    .carousel-container {
-      max-width: 100%;
-      margin: 25px auto 0;
-      overflow: hidden;
-    }
-
     .carousel-track {
       display: flex;
-      animation: scrollHorizontal 28s linear infinite;
+      animation: scrollHorizontal 30s linear infinite;
       gap: 25px;
-      padding-bottom: 10px;
     }
-
-    .carousel-track:hover {
-      animation-play-state: paused;
-    }
-
+    .carousel-track:hover { animation-play-state: paused; }
     .carousel-track img {
       height: 95px;
       width: auto;
@@ -76,7 +57,6 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       flex-shrink: 0;
     }
-
     @keyframes scrollHorizontal {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -98,6 +78,13 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.3);
       z-index: 1000;
     }
+
+    /* Botón deshabilitado */
+    .btn-disabled {
+      background-color: #9ca3af !important;
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body class="bg-gray-50">
@@ -112,6 +99,7 @@
         <div class="flex gap-8 text-lg font-medium">
           <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
           <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
+          <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
         </div>
       </div>
     </div>
@@ -120,7 +108,6 @@
   <!-- Hero -->
   <section class="hero text-white text-center">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      
       <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl mb-4">
         DISTRIBUIDORA
       </h1>
@@ -135,7 +122,6 @@
         Suministros de Limpieza para Industria y Hogar en Aguascalientes
       </p>
       
-      <!-- Botón con blinking -->
       <a href="https://wa.me/5214494382751?text=Hola,%20quiero%20más%20información, te encontré en https://jiloservice.com" 
          target="_blank"
          class="btn-whatsapp inline-flex items-center gap-3 px-8 py-4 rounded-full text-lg font-semibold mx-auto shadow-xl">
@@ -144,82 +130,115 @@
       </a>
 
       <!-- Carrusel Horizontal -->
-      <div class="carousel-container">
+      <div class="carousel-container mt-8">
         <div class="carousel-track">
-          <img src="images/imagen01.gif" alt="Producto 1">
-          <img src="images/imagen02.gif" alt="Producto 2">
-          <img src="images/imagen03.gif" alt="Producto 3">
-          <img src="images/imagen04.gif" alt="Producto 4">
-          <img src="images/imagen05.gif" alt="Producto 5">
-          <img src="images/imagen06.gif" alt="Producto 6">
-          <img src="images/imagen07.gif" alt="Producto 7">
-          <img src="images/imagen08.gif" alt="Producto 8">
-          <img src="images/imagen09.gif" alt="Producto 9">
-          <img src="images/imagen10.gif" alt="Producto 10">
-
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Wiese_logo_black.png" alt="Wiese">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Rubbermaid_logo.svg" alt="Rubbermaid">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Kleenex_logo.svg" alt="Kleenex">
+          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/dust-logo.png" alt="Dust">
+          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/bio-tissue-logo.png" alt="BIO Tissue">
+          <img src="https://www.kimberly-clark.com/-/media/kimberlyclark/brand-logos/scott-essential-logo.png" alt="Scott Essential">
           <!-- Duplicados -->
-          <img src="images/imagen01.gif" alt="Producto 1">
-          <img src="images/imagen02.gif" alt="Producto 2">
-          <img src="images/imagen03.gif" alt="Producto 3">
-          <img src="images/imagen04.gif" alt="Producto 4">
-          <img src="images/imagen05.gif" alt="Producto 5">
-          <img src="images/imagen06.gif" alt="Producto 6">
-          <img src="images/imagen07.gif" alt="Producto 7">
-          <img src="images/imagen08.gif" alt="Producto 8">
-          <img src="images/imagen09.gif" alt="Producto 9">
-          <img src="images/imagen10.gif" alt="Producto 10">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Wiese_logo_black.png" alt="Wiese">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Rubbermaid_logo.svg" alt="Rubbermaid">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Kleenex_logo.svg" alt="Kleenex">
+          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/dust-logo.png" alt="Dust">
+          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/bio-tissue-logo.png" alt="BIO Tissue">
+          <img src="https://www.kimberly-clark.com/-/media/kimberlyclark/brand-logos/scott-essential-logo.png" alt="Scott Essential">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Productos -->
-  <section id="productos" class="py-16 px-4 sm:px-6 max-w-6xl mx-auto">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">Nuestros Productos</h2>
-    <p class="text-center text-gray-600 mb-12">Soluciones completas para tu negocio</p>
+  <section id="productos" class="py-16 bg-orange-500 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Nuestros Proveedores</h2>
+      <p class="text-center text-orange-100 mb-12 text-lg">Descarga los catálogos oficiales en PDF</p>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
-        <i class="fas fa-mop text-5xl text-blue-600 mb-6"></i>
-        <h3 class="text-2xl font-bold mb-3">Productos Químicos</h3>
-        <p class="text-gray-600 mb-6">Desinfectantes, desengrasantes, multiusos y más.</p>
-        <a href="https://wa.me/5214494382751?text=Quiero%20información%20de%20químicos" target="_blank" class="text-green-600 font-semibold flex items-center gap-2 hover:text-green-700">
-          <i class="fab fa-whatsapp"></i> Solicitar cotización
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CatalogoFAPSA.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">FAPSA</h3>
+          <p class="text-gray-600 mb-4">Productos químicos y limpieza profesional</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
         </a>
-      </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
-        <i class="fas fa-toilet-paper text-5xl text-amber-600 mb-6"></i>
-        <h3 class="text-2xl font-bold mb-3">Higiénicos Desechables</h3>
-        <p class="text-gray-600 mb-6">Papel higiénico, toallas, servilletas.</p>
-        <a href="https://wa.me/5214494382751?text=Quiero%20información%20de%20higiénicos" target="_blank" class="text-green-600 font-semibold flex items-center gap-2 hover:text-green-700">
-          <i class="fab fa-whatsapp"></i> Solicitar cotización
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO-SABLON.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">SABLÓN</h3>
+          <p class="text-gray-600 mb-4">Línea completa de productos de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
         </a>
-      </div>
 
-      <div class="bg-white p-8 rounded-3xl shadow hover:shadow-xl transition">
-        <i class="fas fa-hard-hat text-5xl text-yellow-600 mb-6"></i>
-        <h3 class="text-2xl font-bold mb-3">Equipo de Protección (EPP)</h3>
-        <p class="text-gray-600 mb-6">Casco, guantes, mascarillas y más.</p>
-        <a href="https://wa.me/5214494382751?text=Quiero%20información%20de%20EPP" target="_blank" class="text-green-600 font-semibold flex items-center gap-2 hover:text-green-700">
-          <i class="fab fa-whatsapp"></i> Solicitar cotización
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ambiderm+%281%29.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">AMBIDERM</h3>
+          <p class="text-gray-600 mb-4">Soluciones industriales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogELITE.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">ELITE</h3>
+          <p class="text-gray-600 mb-4">Productos premium de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CFSBrands_Catalogo2026_LOW.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JOFEL</h3>
+          <p class="text-gray-600 mb-4">Dispensadores y accesorios</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+EL+CASTOR.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JARCIERÍA EL CASTOR</h3>
+          <p class="text-gray-600 mb-4">Jarciería y herramientas</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO_DUST_COINTER.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">DUST</h3>
+          <p class="text-gray-600 mb-4">Limpieza especializada</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ruberbermaid.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">RUBBERMAID</h3>
+          <p class="text-gray-600 mb-4">Equipos y herramientas profesionales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Contacto -->
-  <section class="bg-gray-900 text-white py-16">
+  <section id="contacto" class="bg-gray-900 text-white py-16">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-4">¿Necesitas una cotización?</h2>
-      <p class="mb-8 text-gray-400">Contáctanos y te responderemos rápidamente</p>
+      <p class="mb-10 text-gray-400">Contáctanos y te responderemos rápidamente</p>
 
       <form id="contactForm" class="max-w-lg mx-auto space-y-6">
         <input type="text" placeholder="Nombre completo" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
         <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
         <textarea placeholder="Cuéntanos qué productos necesitas..." rows="5" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500"></textarea>
-        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 py-6 rounded-2xl font-semibold text-xl">
-          Enviar mensaje
+        
+        <!-- Botón DESHABILITADO -->
+        <button type="button" disabled class="btn-disabled w-full py-6 rounded-2xl font-semibold text-xl flex items-center justify-center gap-2">
+          <i class="fas fa-clock"></i>
+          Enviar mensaje (Próximamente)
         </button>
       </form>
     </div>
@@ -234,11 +253,5 @@
     <p>Copyright © 2026 Jilo Service - Todos los derechos reservados. Aguascalientes</p>
   </footer>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('✅ Mensaje enviado correctamente. Te contactaremos pronto.');
-    });
-  </script>
 </body>
 </html>
