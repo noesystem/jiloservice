@@ -12,14 +12,15 @@
       font-family: 'Segoe UI', system-ui, sans-serif; 
     }
 
+    /* Hero - Azul Cielo (Atenuado) */
     .hero { 
-      background: linear-gradient(rgba(0, 51, 102, 0.55), rgba(0, 32, 70, 0.65)), 
+      background: linear-gradient(rgba(135, 206, 250, 0.65), rgba(70, 130, 180, 0.75)), 
                   url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
       background-size: cover; 
       background-position: center;
-      padding-top: 65px;     /* Reducido para que el carrusel se vea antes */
-      padding-bottom: 25px;  /* Reducido */
-      min-height: 85vh;      /* Mantiene buena presencia pero permite ver el carrusel */
+      padding-top: 65px;     
+      padding-bottom: 25px;  
+      min-height: 85vh;      
     }
 
     .hero-title {
@@ -44,27 +45,84 @@
       50% { color: #86efac; background-color: #15803d; }
     }
 
-    /* Carrusel Horizontal */
+    /* Carrusel Horizontal - Mejorado y Uniforme */
     .carousel-container {
-      margin-top: 20px; /* Reducido desde mt-8 */
+      margin-top: 20px;
     }
     
     .carousel-track {
       display: flex;
-      animation: scrollHorizontal 30s linear infinite;
-      gap: 25px;
+      animation: scrollHorizontal 20s linear infinite;
+      gap: 30px;
+      align-items: center;
     }
-    .carousel-track:hover { animation-play-state: paused; }
+    
+    .carousel-track:hover { 
+      animation-play-state: paused; 
+    }
+
+    .brand-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 95px;
+      flex-shrink: 0;
+    }
+
     .carousel-track img {
       height: 95px;
       width: auto;
+      max-width: 170px;           /* Ancho máximo uniforme */
+      object-fit: contain;        /* Evita distorsión */
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      flex-shrink: 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      transition: all 0.4s ease;
     }
+
+    .carousel-track img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
+
     @keyframes scrollHorizontal {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
+    }
+
+    /* Tooltips */
+    .brand-tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 115%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #001F3F;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      z-index: 10;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
+
+    .brand-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -6px;
+      border: 6px solid transparent;
+      border-top-color: #001F3F;
+    }
+
+    .brand-item:hover .brand-tooltip {
+      visibility: visible;
+      opacity: 1;
+      bottom: 125%;
     }
 
     .whatsapp-float {
@@ -97,25 +155,21 @@
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <!-- Logo -->
         <div class="flex items-center gap-2">
           <img src="images/logojilo.jpeg" alt="Jilo Service" class="h-9 w-auto">
         </div>
 
-        <!-- Menú Desktop -->
         <div class="hidden md:flex gap-8 text-lg font-medium">
           <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
           <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
           <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
         </div>
 
-        <!-- Botón Hamburguesa -->
         <button id="menuBtn" class="md:hidden text-3xl text-gray-700">
           <i class="fas fa-bars"></i>
         </button>
       </div>
 
-      <!-- Menú Móvil -->
       <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t">
         <div class="flex flex-col gap-4 text-lg font-medium">
           <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
@@ -153,25 +207,61 @@
       <!-- Carrusel Horizontal -->
       <div class="carousel-container">
         <div class="carousel-track">
-          <img src="images/logo+Wise-1920w.webp" alt="Wiese">
-          <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
-          <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
-          <img src="images/logo+DUST-1920w.webp" alt="Dust">
-          <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
-          <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
+          <div class="brand-item">
+            <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+            <div class="brand-tooltip">Wiese</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
+            <div class="brand-tooltip">Rubbermaid</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
+            <div class="brand-tooltip">Kleenex</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/logo+DUST-1920w.webp" alt="Dust">
+            <div class="brand-tooltip">Dust</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
+            <div class="brand-tooltip">BIO Tissue</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
+            <div class="brand-tooltip">Scott Essential</div>
+          </div>
+
           <!-- Duplicados -->
-          <img src="images/logo+Wise-1920w.webp" alt="Wiese">
-          <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
-          <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
-          <img src="images/logo+DUST-1920w.webp" alt="Dust">
-          <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
-          <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
+          <div class="brand-item">
+            <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+            <div class="brand-tooltip">Wiese</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
+            <div class="brand-tooltip">Rubbermaid</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
+            <div class="brand-tooltip">Kleenex</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/logo+DUST-1920w.webp" alt="Dust">
+            <div class="brand-tooltip">Dust</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
+            <div class="brand-tooltip">BIO Tissue</div>
+          </div>
+          <div class="brand-item">
+            <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
+            <div class="brand-tooltip">Scott Essential</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Productos y Contacto (se mantienen igual que antes) -->
   <!-- Productos -->
   <section id="productos" class="py-16 bg-orange-500 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -275,7 +365,6 @@
   </footer>
 
   <script>
-    // Menú móvil
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -286,7 +375,6 @@
       icon.classList.toggle('fa-times');
     });
 
-    // Cerrar menú al hacer clic en un enlace
     document.querySelectorAll('#mobileMenu a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
