@@ -12,7 +12,7 @@
       font-family: 'Segoe UI', system-ui, sans-serif; 
     }
 
-    /* Hero - Azul Cielo (Atenuado) */
+    /* Hero - Azul Cielo */
     .hero { 
       background: linear-gradient(rgba(135, 206, 250, 0.65), rgba(70, 130, 180, 0.75)), 
                   url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
@@ -45,7 +45,7 @@
       50% { color: #86efac; background-color: #15803d; }
     }
 
-    /* Carrusel Horizontal - Mejorado y Uniforme */
+    /* Carrusel Horizontal */
     .carousel-container {
       margin-top: 20px;
     }
@@ -72,8 +72,8 @@
     .carousel-track img {
       height: 95px;
       width: auto;
-      max-width: 170px;           /* Ancho máximo uniforme */
-      object-fit: contain;        /* Evita distorsión */
+      max-width: 170px;
+      object-fit: contain;
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.25);
       transition: all 0.4s ease;
@@ -207,10 +207,15 @@
       <!-- Carrusel Horizontal -->
       <div class="carousel-container">
         <div class="carousel-track">
+          <!-- Wiese con enlace -->
           <div class="brand-item">
-            <img src="images/logo+Wise-1920w.webp" alt="Wiese">
-            <div class="brand-tooltip">Wiese</div>
+            <a href="wiese.html">
+              <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+            </a>
+            <div class="brand-tooltip">Ver productos Wiese</div>
           </div>
+          
+          <!-- Otras marcas -->
           <div class="brand-item">
             <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
             <div class="brand-tooltip">Rubbermaid</div>
@@ -232,10 +237,12 @@
             <div class="brand-tooltip">Scott Essential</div>
           </div>
 
-          <!-- Duplicados -->
+          <!-- Duplicados para efecto continuo -->
           <div class="brand-item">
-            <img src="images/logo+Wise-1920w.webp" alt="Wiese">
-            <div class="brand-tooltip">Wiese</div>
+            <a href="wiese.html">
+              <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+            </a>
+            <div class="brand-tooltip">Ver productos Wiese</div>
           </div>
           <div class="brand-item">
             <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
@@ -365,6 +372,7 @@
   </footer>
 
   <script>
+    // Menú móvil
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
