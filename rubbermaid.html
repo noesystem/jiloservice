@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubbermaid - Productos Profesionales | Jilo Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+    }
+
+    .hero-rubbermaid { 
+      background: linear-gradient(rgba(135, 206, 250, 0.65), rgba(70, 130, 180, 0.75)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
+      background-size: cover; 
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    .table-header {
+      background-color: rgba(255,255,255,0.95);
+      color: #1e40af;
+    }
+
+    /* Botón flotante de regreso */
+    .btn-back {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: #1e40af;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    .btn-back:hover {
+      background: #1e3a8a;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Hero -->
+  <section class="hero-rubbermaid text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center gap-4 mb-8">
+        <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid" class="h-20 w-auto bg-white rounded-2xl p-3 shadow-xl">
+        <div>
+          <h1 class="text-5xl font-black tracking-wider">RUBBERMAID</h1>
+          <p class="text-xl font-medium">Soluciones Profesionales de Limpieza y Organización</p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden">
+        <div class="bg-blue-800 text-white py-6 px-8">
+          <h2 class="text-3xl font-bold flex items-center gap-3">
+            <i class="fas fa-broom"></i>
+            Productos Más Importantes Rubbermaid
+          </h2>
+        </div>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="table-header border-b">
+                <th class="py-5 px-6 text-left font-semibold">Categoría</th>
+                <th class="py-5 px-6 text-left font-semibold">Producto</th>
+                <th class="py-5 px-6 text-left font-semibold">Descripción</th>
+                <th class="py-5 px-6 text-center font-semibold">Uso Principal</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y text-gray-700">
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Carros de Limpieza</td>
+                <td class="py-5 px-6">Carro de Servicio Modular</td>
+                <td class="py-5 px-6 text-sm">Alta resistencia, configurable con accesorios</td>
+                <td class="py-5 px-6 text-center">Hoteles, hospitales y oficinas</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Mopas y Escobas</td>
+                <td class="py-5 px-6">Sistema de Mopa Microfibra</td>
+                <td class="py-5 px-6 text-sm">Alta durabilidad y excelente absorción</td>
+                <td class="py-5 px-6 text-center">Limpieza profesional de pisos</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Contenedores</td>
+                <td class="py-5 px-6">Cubos y Contenedores BRUTE</td>
+                <td class="py-5 px-6 text-sm">Resistentes a impactos y productos químicos</td>
+                <td class="py-5 px-6 text-center">Basura y almacenamiento</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Organización</td>
+                <td class="py-5 px-6">Estantes y Sistemas de Almacenaje</td>
+                <td class="py-5 px-6 text-sm">Modulares y de alta capacidad</td>
+                <td class="py-5 px-6 text-center">Almacenes e industrias</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Higiene</td>
+                <td class="py-5 px-6">Dispensadores y Accesorios</td>
+                <td class="py-5 px-6 text-sm">Jabón, papel, sanitarios</td>
+                <td class="py-5 px-6 text-center">Baños y áreas comunes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-gray-100 px-8 py-6 text-center text-sm text-gray-600">
+          <p>✓ Calidad comercial e industrial líder mundial</p>
+          <p class="mt-1">Distribuidos por <strong>Jilo Service en Aguascalientes</strong></p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://wa.me/5214494382751?text=Hola,%20quiero%20información%20de%20productos%20Rubbermaid" 
+           target="_blank"
+           class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 transition text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          Cotizar Productos Rubbermaid
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón flotante de regreso -->
+  <a href="index.html" 
+     class="btn-back" 
+     title="Regresar al Inicio">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    <p>© 2026 Jilo Service - Distribuidor Autorizado Rubbermaid en Aguascalientes</p>
+  </footer>
+
+</body>
+</html>
