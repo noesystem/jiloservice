@@ -17,8 +17,9 @@
                   url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
       background-size: cover; 
       background-position: center;
-      padding-top: 75px;
-      padding-bottom: 30px;
+      padding-top: 65px;     /* Reducido para que el carrusel se vea antes */
+      padding-bottom: 25px;  /* Reducido */
+      min-height: 85vh;      /* Mantiene buena presencia pero permite ver el carrusel */
     }
 
     .hero-title {
@@ -44,6 +45,10 @@
     }
 
     /* Carrusel Horizontal */
+    .carousel-container {
+      margin-top: 20px; /* Reducido desde mt-8 */
+    }
+    
     .carousel-track {
       display: flex;
       animation: scrollHorizontal 30s linear infinite;
@@ -124,17 +129,17 @@
   <!-- Hero -->
   <section class="hero text-white text-center">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl mb-4">
+      <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl mb-3">
         DISTRIBUIDORA
       </h1>
 
-      <div class="flex justify-center mb-5">
+      <div class="flex justify-center mb-4">
         <img src="images/logojilo.jpeg" 
              alt="Jilo Service" 
-             class="w-[250px] sm:w-[300px] md:w-[360px] h-auto drop-shadow-2xl">
+             class="w-[220px] sm:w-[260px] md:w-[320px] h-auto drop-shadow-2xl">
       </div>
 
-      <p class="text-lg sm:text-xl mb-6 font-medium max-w-xl mx-auto">
+      <p class="text-lg sm:text-xl mb-5 font-medium max-w-xl mx-auto">
         Suministros de Limpieza para Industria y Hogar en Aguascalientes
       </p>
       
@@ -146,28 +151,27 @@
       </a>
 
       <!-- Carrusel Horizontal -->
-      <div class="carousel-container mt-8">
+      <div class="carousel-container">
         <div class="carousel-track">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Wiese_logo_black.png" alt="Wiese">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Rubbermaid_logo.svg" alt="Rubbermaid">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Kleenex_logo.svg" alt="Kleenex">
-          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/dust-logo.png" alt="Dust">
-          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/bio-tissue-logo.png" alt="BIO Tissue">
-          <img src="https://www.kimberly-clark.com/-/media/kimberlyclark/brand-logos/scott-essential-logo.png" alt="Scott Essential">
+          <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+          <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
+          <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
+          <img src="images/logo+DUST-1920w.webp" alt="Dust">
+          <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
+          <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
           <!-- Duplicados -->
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Wiese_logo_black.png" alt="Wiese">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Rubbermaid_logo.svg" alt="Rubbermaid">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Kleenex_logo.svg" alt="Kleenex">
-          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/dust-logo.png" alt="Dust">
-          <img src="https://www.cleaningsuppliesnepp.com.mx/wp-content/uploads/2024/05/bio-tissue-logo.png" alt="BIO Tissue">
-          <img src="https://www.kimberly-clark.com/-/media/kimberlyclark/brand-logos/scott-essential-logo.png" alt="Scott Essential">
+          <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+          <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
+          <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
+          <img src="images/logo+DUST-1920w.webp" alt="Dust">
+          <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
+          <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Productos y Contacto (se mantienen igual que antes) -->
-  <!-- ... (Mantengo el resto del código igual para no alargar) ... -->
   <!-- Productos -->
   <section id="productos" class="py-16 bg-orange-500 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -241,9 +245,6 @@
       </div>
     </div>
   </section>
-
-
-
 
   <!-- Contacto -->
   <section id="contacto" class="bg-gray-900 text-white py-16">
