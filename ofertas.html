@@ -80,7 +80,7 @@
       const container = document.getElementById('ofertas-container');
 
       try {
-        const response = await fetch('/data/ofertas.json');
+        const response = await fetch('/data/ofertas1.json');
         
         if (!response.ok) throw new Error('No se encontró el archivo');
 
@@ -133,7 +133,7 @@
         container.innerHTML = `
           <div class="col-span-3 text-center py-20">
             <p class="text-red-500 text-lg">No se pudieron cargar las ofertas</p>
-            <p class="text-gray-500 mt-3">Verifica que el archivo <strong>/data/ofertas.json</strong> esté subido correctamente a Netlify.</p>
+            <p class="text-gray-500 mt-3">Verifica que el archivo <strong>/data/ofertas1.json</strong> esté subido correctamente a Netlify.</p>
           </div>`;
       }
     }
