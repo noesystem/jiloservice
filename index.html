@@ -395,20 +395,43 @@
 
   <!-- Contacto, WhatsApp flotante y Footer se mantienen igual -->
   <section id="contacto" class="bg-gray-900 text-white py-16">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-4">¿Necesitas una cotización?</h2>
-      <p class="mb-10 text-gray-400">Contáctanos y te responderemos rápidamente</p>
-
-      <form id="contactForm" class="max-w-lg mx-auto space-y-6">
-        <input type="text" placeholder="Nombre completo" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
-        <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
-        <textarea placeholder="Cuéntanos qué productos necesitas..." rows="5" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500"></textarea>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
         
-        <button type="button" disabled class="btn-disabled w-full py-6 rounded-2xl font-semibold text-xl flex items-center justify-center gap-2">
-          <i class="fas fa-clock"></i>
-          Enviar mensaje (Próximamente)
-        </button>
-      </form>
+        <!-- Columna Izquierda: Formulario -->
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold mb-4">¿Necesitas una cotización?</h2>
+          <p class="mb-10 text-gray-400">Contáctanos y te responderemos rápidamente</p>
+
+          <form id="contactForm" class="max-w-lg mx-auto md:mx-0 space-y-6">
+            <input type="text" placeholder="Nombre completo" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <textarea placeholder="Cuéntanos qué productos necesitas..." rows="5" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500"></textarea>
+            
+            <button type="button" disabled class="btn-disabled w-full py-6 rounded-2xl font-semibold text-xl flex items-center justify-center gap-2">
+              <i class="fas fa-clock"></i>
+              Enviar mensaje (Próximamente)
+            </button>
+          </form>
+        </div>
+
+        <!-- Columna Derecha: QR Code + Info -->
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold mb-6">También puedes visitarnos escaneando</h3>
+          
+          <div class="inline-block bg-white p-4 rounded-3xl shadow-2xl">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://jiloservice.com" 
+                 alt="Código QR Jilo Service" 
+                 class="rounded-2xl">
+          </div>
+          
+          <p class="text-gray-400 mt-6 text-sm">
+            Escanea y accede rápidamente a nuestro sitio web<br>
+            <strong class="text-white">jiloservice.com</strong>
+          </p>
+        </div>
+
+      </div>
     </div>
   </section>
 
