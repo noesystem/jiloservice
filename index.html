@@ -197,11 +197,28 @@
         DISTRIBUIDORA
       </h1>
 
-      <div class="flex justify-center mb-4">
-        <img src="images/logojilo.jpeg" 
-             alt="Jilo Service" 
-             class="w-[220px] sm:w-[260px] md:w-[320px] h-auto drop-shadow-2xl">
+
+      <!-- Logo + QR Code -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
+        <!-- Logo de la empresa -->
+        <div class="flex justify-center">
+          <img src="images/logojilo.jpeg" 
+               alt="Jilo Service" 
+               class="w-[220px] sm:w-[260px] md:w-[280px] h-auto drop-shadow-2xl">
+        </div>
+
+        <!-- Código QR -->
+        <div class="text-center md:text-left">
+          <p class="text-sm font-medium text-white/90 mb-2">Escanea para visitar</p>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://jiloservice.com" 
+               alt="Código QR Jilo Service" 
+               class="mx-auto md:mx-0 border-4 border-white/80 shadow-2xl rounded-2xl bg-white p-2">
+          <p class="text-xs text-white/70 mt-2">jiloservice.com</p>
+        </div>
       </div>
+
+
+
 
       <p class="text-lg sm:text-xl mb-5 font-medium max-w-xl mx-auto">
         Suministros de Limpieza para Industria y Hogar en Aguascalientes
