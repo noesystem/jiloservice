@@ -45,14 +45,14 @@
       50% { color: #86efac; background-color: #15803d; }
     }
 
-    /* Carrusel Horizontal - Más rápido */
+    /* Carrusel Horizontal */
     .carousel-container {
       margin-top: 20px;
     }
     
     .carousel-track {
       display: flex;
-      animation: scrollHorizontal 15s linear infinite; /* Aumentada la velocidad */
+      animation: scrollHorizontal 15s linear infinite;
       gap: 30px;
       align-items: center;
     }
@@ -106,7 +106,6 @@
       z-index: 10;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
       transition: all 0.25s ease;
-      pointer-events: none;
     }
 
     .brand-tooltip::after {
@@ -123,6 +122,13 @@
       visibility: visible;
       opacity: 1;
       bottom: 125%;
+    }
+
+    .logo-nav {
+      transition: transform 0.3s ease;
+    }
+    .logo-nav:hover {
+      transform: scale(1.08);
     }
 
     .whatsapp-float {
@@ -155,14 +161,16 @@
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <div class="flex items-center gap-2">
+        <!-- Logo clicable -->
+        <a href="ofertas.html" class="flex items-center gap-2 logo-nav" title="Ver Ofertas de la Semana">
           <img src="images/logojilo.jpeg" alt="Jilo Service" class="h-9 w-auto">
-        </div>
+        </a>
 
         <div class="hidden md:flex gap-8 text-lg font-medium">
           <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
           <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
           <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
+          <a href="ofertas.html" class="nav-link text-orange-600 font-semibold hover:text-orange-700">Ofertas Semanales 🔥</a>
         </div>
 
         <button id="menuBtn" class="md:hidden text-3xl text-gray-700">
@@ -170,11 +178,13 @@
         </button>
       </div>
 
+      <!-- Menú Móvil -->
       <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t">
         <div class="flex flex-col gap-4 text-lg font-medium">
           <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
           <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
           <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
+          <a href="ofertas.html" class="nav-link text-orange-600 font-semibold">Ofertas Semanales 🔥</a>
         </div>
       </div>
     </div>
@@ -297,6 +307,7 @@
     </div>
   </section>
 
+  <!-- El resto del código se mantiene igual (Productos, Contacto, Footer, etc.) -->
   <!-- Productos -->
   <section id="productos" class="py-16 bg-orange-500 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -304,6 +315,7 @@
       <p class="text-center text-orange-100 mb-12 text-lg">Descarga los catálogos oficiales en PDF</p>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- ... (se mantiene igual que antes) ... -->
         <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CatalogoFAPSA.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
           <h3 class="font-bold text-xl mb-3">FAPSA</h3>
           <p class="text-gray-600 mb-4">Productos químicos y limpieza profesional</p>
@@ -312,6 +324,8 @@
           </span>
         </a>
 
+        <!-- Repite el resto de cards como en tu código anterior -->
+        <!-- (Para no alargar demasiado, mantengo el formato, copia las demás cards de tu versión) -->
         <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO-SABLON.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
           <h3 class="font-bold text-xl mb-3">SABLÓN</h3>
           <p class="text-gray-600 mb-4">Línea completa de productos de limpieza</p>
@@ -367,11 +381,15 @@
             Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
           </span>
         </a>
+
+
+
+
       </div>
     </div>
   </section>
 
-  <!-- Contacto -->
+  <!-- Contacto, WhatsApp flotante y Footer se mantienen igual -->
   <section id="contacto" class="bg-gray-900 text-white py-16">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-4">¿Necesitas una cotización?</h2>
@@ -390,7 +408,6 @@
     </div>
   </section>
 
-  <!-- WhatsApp flotante -->
   <a href="https://wa.me/5214494382751" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
   </a>
@@ -400,7 +417,6 @@
   </footer>
 
   <script>
-    // Menú móvil
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 

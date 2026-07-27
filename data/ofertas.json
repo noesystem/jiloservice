@@ -1,0 +1,70 @@
+{
+  "ofertas": [
+    {
+      "id": 1,
+      "titulo": "Cloro Industrial 5L",
+      "marca": "Wiese / Dust",
+      "precio_original": 236,
+      "precio_oferta": 189,
+      "descuento": 20,
+      "stock": 18,
+      "imagen": "https://via.placeholder.com/600x400/1e40af/ffffff?text=Cloro+Industrial+5L",
+      "whatsapp_texto": "Me interesa el Cloro Industrial 5L en oferta"
+    },
+    {
+      "id": 2,
+      "titulo": "Guantes Nitrilo Negro Talla M/L (Caja 100)",
+      "marca": "Ambiderm",
+      "precio_original": 289,
+      "precio_oferta": 245,
+      "descuento": 15,
+      "stock": 7,
+      "imagen": "https://via.placeholder.com/600x400/1e40af/ffffff?text=Guantes+Nitrilo",
+      "whatsapp_texto": "Me interesa la caja de Guantes Nitrilo"
+    },
+    {
+      "id": 3,
+      "titulo": "Desinfectante Multiusos 5L",
+      "marca": "FAPSA / Sablón",
+      "precio_original": 220,
+      "precio_oferta": 165,
+      "descuento": 25,
+      "stock": 24,
+      "imagen": "https://via.placeholder.com/600x400/1e40af/ffffff?text=Desinfectante+Multiusos",
+      "whatsapp_texto": "Me interesa el Desinfectante Multiusos 5L"
+    },
+    {
+      "id": 4,
+      "titulo": "Trapero Industrial con Mango",
+      "marca": "Rubbermaid",
+      "precio_original": 185,
+      "precio_oferta": 149,
+      "descuento": 19,
+      "stock": 12,
+      "imagen": "https://via.placeholder.com/600x400/1e40af/ffffff?text=Trapero+Industrial",
+      "whatsapp_texto": "Me interesa el Trapero Industrial"
+    },
+    {
+      "id": 5,
+      "titulo": "Papel Higiénico Jumbo 12 rollos",
+      "marca": "Scott Essential",
+      "precio_original": 320,
+      "precio_oferta": 259,
+      "descuento": 19,
+      "stock": 35,
+      "imagen": "https://via.placeholder.com/600x400/1e40af/ffffff?text=Papel+Higiénico+Jumbo",
+      "whatsapp_texto": "Me interesa el Paquete de Papel Higiénico Jumbo"
+    },
+    {
+      "id": 6,
+      "titulo": "Bolsas para Basura 90x120 cm (Paquete 50)",
+      "marca": "BIO Tissue",
+      "precio_original": 145,
+      "precio_oferta": 115,
+      "descuento": 21,
+      "stock": 9,
+      "imagen": "https://via.placeholder.com/600x400/1e40af/ffffff?text=Bolsas+Basura",
+      "whatsapp_texto": "Me interesa el paquete de Bolsas para Basura"
+    }
+  ]
+}
