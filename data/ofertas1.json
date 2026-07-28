@@ -2,14 +2,14 @@
   "ofertas": [
     {
       "id": 1,
-      "titulo": "Sin ofertas publicadas por el distribuidor",
-      "marca": "Wiese / Dust",
+      "titulo": "Caja Toalla interdoblada (Precio más I.V.A.)",
+      "marca": "Fapsa",
       "precio_original": 0,
-      "precio_oferta": 0,
+      "precio_oferta": 282.50,
       "descuento": 0,
       "stock": 0,
-      "imagen": "https://via.placeholder.com/600x400/1e40af/ffffff?text=Cloro+Industrial+5L",
-      "whatsapp_texto": "Me interesa el Cloro Industrial 5L en oferta"
+      "imagen": "https://www.bing.com/images/search?view=detailV2&ccid=SFMD1PkK&id=9A2B82C4768AEF77AF8C4E6E77D1F859DEF0FB0A&thid=OIP.SFMD1PkK9N31sQN1hOHV9AHaGY&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.485303d4f90af4ddf5b1037584e1d5f4%3frik%3dCvvw3ln40XduTg%26riu%3dhttp%253a%252f%252firischemical.com%252fimages%252ffapsa.gif%26ehk%3dqexxNOO7JBSFF5ACQp5KqkxdRDAMGB0AgQOXbeLhD6s%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=550&expw=638&q=logo+fapsa&mode=overlay&FORM=IQFRBA&ck=D3D89BA101650EE64F7A8DF78031DE37&selectedIndex=0&idpp=serp",
+      "whatsapp_texto": "Me interesa este producto: "
     }
   ]
 }
