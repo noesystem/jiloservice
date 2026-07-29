@@ -9,7 +9,7 @@
       "descuento": 9,
       "stock": 100,
       "imagen": "images/oferta_FAPSA_20260728A.jpeg",
-      "whatsapp_texto": "Me interesa este producto: "
+      "whatsapp_texto": "Me interesa este producto: Caja con 20 paquetes de 100 Toallas interdobladas"
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
       "descuento": 14.32,
       "stock": 20,
       "imagen": "images/oferta_FAPSA_20260728B.jpeg",
-      "whatsapp_texto": "Me interesa este producto: "
+      "whatsapp_texto": "Me interesa este producto: Despachador Plástico con capacidad de 250 toallas interdobladas"
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "descuento": 5.75,
       "stock": 80,
       "imagen": "images/oferta_ELITE_20260728A.jpeg",
-      "whatsapp_texto": "Me interesa este producto: "
+      "whatsapp_texto": "Me interesa este producto: Toalla en rollo Classic 160 mts en 6 rollos"
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "descuento": 11.60,
       "stock": 80,
       "imagen": "images/oferta_ELITE_20260728B.jpeg",
-      "whatsapp_texto": "Me interesa este producto: "
+      "whatsapp_texto": "Me interesa este producto: Papel higiénico Classic Doble Hoja 160 mts en 12 rollos"
     }
    
   ]
