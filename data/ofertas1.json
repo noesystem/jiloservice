@@ -6,7 +6,7 @@
       "marca": "Marca: Fapsa",
       "precio_original": 282.50,
       "precio_oferta": 257.00,
-      "descuento": 9%,
+      "descuento": 9,
       "stock": 100,
       "imagen": "images/oferta_FAPSA_20260728A.jpeg",
       "whatsapp_texto": "Me interesa este producto: "
@@ -17,7 +17,7 @@
       "marca": "Marca: Oval",
       "precio_original": 349.00,
       "precio_oferta": 299.00,
-      "descuento": 14.32%,
+      "descuento": 14.32,
       "stock": 20,
       "imagen": "images/oferta_FAPSA_20260728B.jpeg",
       "whatsapp_texto": "Me interesa este producto: "
@@ -28,7 +28,7 @@
       "marca": "Marca: Elite",
       "precio_original": 365.00,
       "precio_oferta": 344.00,
-      "descuento": 5.75%,
+      "descuento": 5.75,
       "stock": 80,
       "imagen": "images/oferta_ELITE_20260728A.jpeg",
       "whatsapp_texto": "Me interesa este producto: "
@@ -39,7 +39,7 @@
       "marca": "Marca: Elite",
       "precio_original": 395.00,
       "precio_oferta": 349.00,
-      "descuento": 11.60%,
+      "descuento": 11.60,
       "stock": 80,
       "imagen": "images/oferta_ELITE_20260728B.jpeg",
       "whatsapp_texto": "Me interesa este producto: "
