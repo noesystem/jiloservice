@@ -3,12 +3,23 @@
     {
       "id": 1,
       "titulo": "Caja con 20 paquetes de 100 Toallas interdobladas (Precio más I.V.A.)",
-      "marca": "Fapsa",
+      "marca": "Marca: Fapsa",
       "precio_original": 0,
       "precio_oferta": 282.50,
       "descuento": 0,
       "stock": 0,
       "imagen": "images/oferta_FAPSA_20260728A.jpeg",
+      "whatsapp_texto": "Me interesa este producto: "
+    },
+    {
+      "id": 2,
+      "titulo": "Despachador de Toallas interdobladas (Precio más I.V.A.)",
+      "marca": "Marca: Oval",
+      "precio_original": 0,
+      "precio_oferta": 299.00,
+      "descuento": 0,
+      "stock": 0,
+      "imagen": "images/oferta_FAPSA_20260728B.jpeg",
       "whatsapp_texto": "Me interesa este producto: "
     }
   ]
