@@ -43,6 +43,39 @@
       "stock": 80,
       "imagen": "images/oferta_ELITE_20260728B.jpeg",
       "whatsapp_texto": "Me interesa este producto: Papel higiénico Classic Doble Hoja 160 mts en 12 rollos"
+    };
+    {
+      "id": 5,
+      "titulo": "Botiquín contenedor altura 33cm. ancho 26cm. profundidad 11cm metálico (Precio más I.V.A.)",
+      "marca": "Marca: Trifuego",
+      "precio_original": 449.00,
+      "precio_oferta": 399.00,
+      "descuento": 11.13,
+      "stock": 30,
+      "imagen": "images/oferta_JILOSERVICE_20260728B.jpeg",
+      "whatsapp_texto": "Me interesa este producto: Botiquín contenedor altura 33cm. ancho 26cm. profundidad 11cm metálico"
+    };
+    {
+      "id": 6,
+      "titulo": "Contenido Primeros auxilios para botiquín escencial oficinas, escuelas, automóviles y hogares (Precio más I.V.A.)",
+      "marca": "Marca: Jaloma",
+      "precio_original": 265.00,
+      "precio_oferta": 225.00,
+      "descuento": 15.00,
+      "stock": 100,
+      "imagen": "images/oferta_JILOSERVICE_20260728C.jpeg",
+      "whatsapp_texto": "Me interesa este producto: Contenido Primeros auxilios para botiquín escencial oficinas, escuelas, automóviles y hogares"
+    };
+    {
+      "id": 7,
+      "titulo": "Paño de Microfibra diversos colores 40 x 40 cms Pieza (Precio más I.V.A.)",
+      "marca": "Marca:",
+      "precio_original": 15.99,
+      "precio_oferta": 12.99,
+      "descuento": 18.00,
+      "stock": 1000,
+      "imagen": "images/oferta_JILOSERVICE_20260728A.jpeg",
+      "whatsapp_texto": "Me interesa este producto: Contenido Primeros auxilios para botiquín escencial oficinas, escuelas, automóviles y hogares"
     }
    
   ]
