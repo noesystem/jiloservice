@@ -45,12 +45,13 @@
       50% { color: #86efac; background-color: #15803d; }
     }
 
-    /* ===== CARRUSEL INFINITO ===== */
+    /* ===== CARRUSEL INFINITO + TOOLTIPS ARRIBA ===== */
     .carousel-container {
-      margin-top: 20px;
+      margin-top: 30px;
       overflow: hidden;
       width: 100%;
-      padding-bottom: 50px; /* Espacio para los tooltips */
+      padding-top: 55px;      /* Espacio para tooltips arriba */
+      padding-bottom: 10px;
     }
     
     .carousel-track {
@@ -93,12 +94,12 @@
       100% { transform: translateX(-50%); }
     }
 
-    /* ===== TOOLTIPS (aparecen ABAJO para no cortarse) ===== */
+    /* Tooltips ARRIBA */
     .brand-tooltip {
       visibility: hidden;
       opacity: 0;
       position: absolute;
-      top: 110%;                /* Ahora aparece abajo */
+      bottom: 115%;
       left: 50%;
       transform: translateX(-50%);
       background-color: #001F3F;
@@ -107,8 +108,8 @@
       border-radius: 8px;
       font-size: 0.85rem;
       white-space: nowrap;
-      z-index: 20;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      z-index: 30;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
       transition: all 0.25s ease;
       pointer-events: none;
     }
@@ -116,17 +117,17 @@
     .brand-tooltip::after {
       content: '';
       position: absolute;
-      bottom: 100%;             /* Flecha apunta hacia arriba */
+      top: 100%;
       left: 50%;
       margin-left: -6px;
       border: 6px solid transparent;
-      border-bottom-color: #001F3F;
+      border-top-color: #001F3F;
     }
 
     .brand-item:hover .brand-tooltip {
       visibility: visible;
       opacity: 1;
-      top: 115%;
+      bottom: 125%;
     }
 
     .logo-nav {
@@ -306,8 +307,144 @@
     </div>
   </section>
 
-  <!-- El resto del código (Productos, Contacto, Footer, etc.) se mantiene exactamente igual que en tu versión anterior -->
-  <!-- Aquí va el resto de tu código sin cambios -->
+  <!-- Productos -->
+  <section id="productos" class="py-16 bg-orange-500 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Nuestros Proveedores</h2>
+      <p class="text-center text-orange-100 mb-12 text-lg">Descarga los catálogos oficiales en PDF</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CatalogoFAPSA.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">FAPSA</h3>
+          <p class="text-gray-600 mb-4">Productos químicos y limpieza profesional</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO-SABLON.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">SABLÓN</h3>
+          <p class="text-gray-600 mb-4">Línea completa de productos de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ambiderm+%281%29.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">AMBIDERM</h3>
+          <p class="text-gray-600 mb-4">Soluciones industriales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogELITE.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">ELITE</h3>
+          <p class="text-gray-600 mb-4">Productos premium de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CFSBrands_Catalogo2026_LOW.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JOFEL</h3>
+          <p class="text-gray-600 mb-4">Dispensadores y accesorios</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+EL+CASTOR.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JARCIERÍA EL CASTOR</h3>
+          <p class="text-gray-600 mb-4">Jarciería y herramientas</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO_DUST_COINTER.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">DUST</h3>
+          <p class="text-gray-600 mb-4">Limpieza especializada</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ruberbermaid.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">RUBBERMAID</h3>
+          <p class="text-gray-600 mb-4">Equipos y herramientas profesionales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://silym.com.mx/wp-content/uploads/2024/02/CATALOGO-WIESE-1.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">WIESE</h3>
+          <p class="text-gray-600 mb-4">Los mejores sanitizantes, neutralizadores de olores y exquisitas fragancias ambientales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/1901b6bd/files/uploaded/Cat%C3%A1logo+OVAL+2026+-+digital.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">OVAL contigo de por vida</h3>
+          <p class="text-gray-600 mb-4">Despachadores diseñados para durar, cubeta exprimidora, carro conserje, insumos para la higiene, jaboneras.</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-gray-900 text-white py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold mb-4">¿Necesitas una cotización?</h2>
+          <p class="mb-10 text-gray-400">Contáctanos y te responderemos rápidamente</p>
+
+          <form id="contactForm" class="max-w-lg mx-auto md:mx-0 space-y-6">
+            <input type="text" placeholder="Nombre completo" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <textarea placeholder="Cuéntanos qué productos necesitas..." rows="5" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500"></textarea>
+            
+            <button type="button" disabled class="btn-disabled w-full py-6 rounded-2xl font-semibold text-xl flex items-center justify-center gap-2">
+              <i class="fas fa-clock"></i>
+              Enviar mensaje (Próximamente)
+            </button>
+          </form>
+        </div>
+
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold mb-6">También puedes visitarnos escaneando</h3>
+          
+          <div class="inline-block bg-white p-4 rounded-3xl shadow-2xl">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://jiloservice.com/ofertas.html" 
+                 alt="Código QR Jilo Service" 
+                 class="rounded-2xl">
+          </div>
+          
+          <p class="text-gray-400 mt-6 text-sm">
+            Escanea y accede rápidamente a nuestro sitio web<br>
+            <strong class="text-white">https://jiloservice.com</strong>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/5214494382751" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="bg-gray-950 text-gray-500 py-10 text-center">
+    <p>Copyright © 2026 Jilo Service - Todos los derechos reservados. Aguascalientes</p>
+  </footer>
 
   <script>
     const menuBtn = document.getElementById('menuBtn');
