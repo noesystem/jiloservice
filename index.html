@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JILO SERVICE - Suministros de Limpieza y EPP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+    }
+
+    /* Hero - Azul Cielo */
+    .hero { 
+      background: linear-gradient(rgba(135, 206, 250, 0.65), rgba(70, 130, 180, 0.75)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
+      background-size: cover; 
+      background-position: center;
+      padding-top: 65px;     
+      padding-bottom: 25px;  
+      min-height: 85vh;      
+    }
+
+    .hero-title {
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      letter-spacing: 4px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      transition: all 0.3s;
+    }
+    .nav-link:hover {
+      color: #4ade80;
+    }
+
+    .btn-whatsapp {
+      animation: blink-strong 1.5s infinite;
+    }
+    @keyframes blink-strong {
+      0%, 100% { color: white; background-color: #25D366; }
+      50% { color: #86efac; background-color: #15803d; }
+    }
+
+    /* ===== CARRUSEL INFINITO MEJORADO ===== */
+    .carousel-container {
+      margin-top: 20px;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scrollHorizontal 25s linear infinite; /* Más lento y suave */
+      gap: 30px;
+      align-items: center;
+    }
+    
+    .carousel-track:hover { 
+      animation-play-state: paused; 
+    }
+
+    .brand-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 95px;
+      flex-shrink: 0;
+    }
+
+    .carousel-track img {
+      height: 95px;
+      width: auto;
+      max-width: 170px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      transition: all 0.4s ease;
+    }
+
+    .carousel-track img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
+
+    @keyframes scrollHorizontal {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Tooltips */
+    .brand-tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 115%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #001F3F;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      z-index: 10;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
+
+    .brand-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -6px;
+      border: 6px solid transparent;
+      border-top-color: #001F3F;
+    }
+
+    .brand-item:hover .brand-tooltip {
+      visibility: visible;
+      opacity: 1;
+      bottom: 125%;
+    }
+
+    .logo-nav {
+      transition: transform 0.3s ease;
+    }
+    .logo-nav:hover {
+      transform: scale(1.08);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .btn-disabled {
+      background-color: #9ca3af !important;
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Menú Superior Responsive -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo clicable -->
+        <a href="ofertas.html" class="flex items-center gap-2 logo-nav" title="Ver Ofertas de la Semana">
+          <img src="images/logojilo.jpeg" alt="Jilo Service" class="h-9 w-auto">
+        </a>
+
+        <div class="hidden md:flex gap-8 text-lg font-medium">
+          <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
+          <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
+          <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
+          <a href="ofertas.html" class="nav-link text-orange-600 font-semibold hover:text-orange-700">Ofertas Semanales 🔥</a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden text-3xl text-gray-700">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Menú Móvil -->
+      <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t">
+        <div class="flex flex-col gap-4 text-lg font-medium">
+          <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
+          <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
+          <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
+          <a href="ofertas.html" class="nav-link text-orange-600 font-semibold">Ofertas Semanales 🔥</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-white text-center">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl mb-3">
+        DISTRIBUIDORA
+      </h1>
+
+      <div class="flex justify-center mb-4">
+        <img src="images/logojilo.jpeg" 
+             alt="Jilo Service" 
+             class="w-[220px] sm:w-[260px] md:w-[320px] h-auto drop-shadow-2xl">
+      </div>
+
+      <p class="text-lg sm:text-xl mb-5 font-medium max-w-xl mx-auto">
+        Suministros de Limpieza para Industria y Hogar en Aguascalientes
+      </p>
+      
+      <a href="https://wa.me/5214494382751?text=Hola,%20quiero%20más%20información, te encontré en https://jiloservice.com" 
+         target="_blank"
+         class="btn-whatsapp inline-flex items-center gap-3 px-8 py-4 rounded-full text-lg font-semibold mx-auto shadow-xl">
+        <i class="fab fa-whatsapp text-2xl"></i> 
+        Cotizar por WhatsApp
+      </a>
+
+      <!-- Carrusel Horizontal Infinito -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- ===== PRIMERA SERIE ===== -->
+          <div class="brand-item">
+            <a href="wiese.html">
+              <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+            </a>
+            <div class="brand-tooltip">Wiese: Desinfecta, Neutraliza y Aromatiza</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="rubbermaid.html">
+              <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
+            </a>
+            <div class="brand-tooltip">Rubbermaid: Made for Work that Matters</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="kleenex.html">
+              <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
+            </a>
+            <div class="brand-tooltip">Kleenex: Let it Out.</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="dust.html">
+               <img src="images/logo+DUST-1920w.webp" alt="Dust">
+            </a>
+            <div class="brand-tooltip">Dust: Limpieza especializada</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="biotissue.html">
+               <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
+            </a> 
+            <div class="brand-tooltip">BIO Tissue: Por un mundo más consciente</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="scottessential.html">
+               <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
+            </a>
+            <div class="brand-tooltip">Scott Essential: Calidad, valor y rendimiento confiable</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="Oval.html">
+               <img src="images/cropped-logo-oval-despachadores.webp" alt="Oval Contigo de por vida">
+            </a>
+            <div class="brand-tooltip">Oval: Contigo de por vida</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="fapsa.html">
+               <img src="images/Fapsa_300x300-100x100.webp" alt="Fapsa 45 años haciendo un gran papel">
+            </a>
+            <div class="brand-tooltip">Fapsa: 45 años haciendo un gran papel</div>
+          </div>
+
+          <!-- ===== SEGUNDA SERIE (Duplicado exacto para loop infinito) ===== -->
+          <div class="brand-item">
+            <a href="wiese.html">
+              <img src="images/logo+Wise-1920w.webp" alt="Wiese">
+            </a>
+            <div class="brand-tooltip">Wiese: Desinfecta, Neutraliza y Aromatiza</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="rubbermaid.html">
+              <img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid">
+            </a>
+            <div class="brand-tooltip">Rubbermaid: Made for Work that Matters</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="kleenex.html">
+              <img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex">
+            </a>
+            <div class="brand-tooltip">Kleenex: Let it Out.</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="dust.html">
+               <img src="images/logo+DUST-1920w.webp" alt="Dust">
+            </a>
+            <div class="brand-tooltip">Dust: Limpieza especializada</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="biotissue.html">
+               <img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue">
+            </a>
+            <div class="brand-tooltip">BIO Tissue: Por un mundo más consciente</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="scottessential.html">
+               <img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential">
+            </a>
+            <div class="brand-tooltip">Scott Essential: Calidad, valor y rendimiento confiable</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="Oval.html">
+               <img src="images/cropped-logo-oval-despachadores.webp" alt="Oval Contigo de por vida">
+            </a>
+            <div class="brand-tooltip">Oval: Contigo de por vida</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="fapsa.html">
+               <img src="images/Fapsa_300x300-100x100.webp" alt="Fapsa 45 años haciendo un gran papel">
+            </a>
+            <div class="brand-tooltip">Fapsa: 45 años haciendo un gran papel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="py-16 bg-orange-500 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Nuestros Proveedores</h2>
+      <p class="text-center text-orange-100 mb-12 text-lg">Descarga los catálogos oficiales en PDF</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CatalogoFAPSA.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">FAPSA</h3>
+          <p class="text-gray-600 mb-4">Productos químicos y limpieza profesional</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO-SABLON.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">SABLÓN</h3>
+          <p class="text-gray-600 mb-4">Línea completa de productos de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ambiderm+%281%29.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">AMBIDERM</h3>
+          <p class="text-gray-600 mb-4">Soluciones industriales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogELITE.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">ELITE</h3>
+          <p class="text-gray-600 mb-4">Productos premium de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CFSBrands_Catalogo2026_LOW.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JOFEL</h3>
+          <p class="text-gray-600 mb-4">Dispensadores y accesorios</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+EL+CASTOR.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JARCIERÍA EL CASTOR</h3>
+          <p class="text-gray-600 mb-4">Jarciería y herramientas</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO_DUST_COINTER.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">DUST</h3>
+          <p class="text-gray-600 mb-4">Limpieza especializada</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ruberbermaid.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">RUBBERMAID</h3>
+          <p class="text-gray-600 mb-4">Equipos y herramientas profesionales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://silym.com.mx/wp-content/uploads/2024/02/CATALOGO-WIESE-1.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">WIESE</h3>
+          <p class="text-gray-600 mb-4">Los mejores sanitizantes, neutralizadores de olores y exquisitas fragancias ambientales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/1901b6bd/files/uploaded/Cat%C3%A1logo+OVAL+2026+-+digital.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">OVAL contigo de por vida</h3>
+          <p class="text-gray-600 mb-4">Despachadores diseñados para durar, cubeta exprimidora, carro conserje, insumos para la higiene, jaboneras.</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-gray-900 text-white py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <!-- Columna Izquierda: Formulario -->
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold mb-4">¿Necesitas una cotización?</h2>
+          <p class="mb-10 text-gray-400">Contáctanos y te responderemos rápidamente</p>
+
+          <form id="contactForm" class="max-w-lg mx-auto md:mx-0 space-y-6">
+            <input type="text" placeholder="Nombre completo" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <textarea placeholder="Cuéntanos qué productos necesitas..." rows="5" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500"></textarea>
+            
+            <button type="button" disabled class="btn-disabled w-full py-6 rounded-2xl font-semibold text-xl flex items-center justify-center gap-2">
+              <i class="fas fa-clock"></i>
+              Enviar mensaje (Próximamente)
+            </button>
+          </form>
+        </div>
+
+        <!-- Columna Derecha: QR Code -->
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold mb-6">También puedes visitarnos escaneando</h3>
+          
+          <div class="inline-block bg-white p-4 rounded-3xl shadow-2xl">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://jiloservice.com/ofertas.html" 
+                 alt="Código QR Jilo Service" 
+                 class="rounded-2xl">
+          </div>
+          
+          <p class="text-gray-400 mt-6 text-sm">
+            Escanea y accede rápidamente a nuestro sitio web<br>
+            <strong class="text-white">https://jiloservice.com</strong>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/5214494382751" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="bg-gray-950 text-gray-500 py-10 text-center">
+    <p>Copyright © 2026 Jilo Service - Todos los derechos reservados. Aguascalientes</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      });
+    });
+  </script>
+</body>
+</html>
