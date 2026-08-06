@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oval Contigo de por Vida - Dispensadores y Soluciones Higiénicas | Jilo Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+    }
+
+    .hero-oval { 
+      background: linear-gradient(rgba(135, 206, 250, 0.65), rgba(70, 130, 180, sab0.75)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
+      background-size: cover; 
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    .table-header {
+      background-color: rgba(255,255,255,0.95);
+      color: #1e40af;
+    }
+
+    /* Botón flotante de regreso */
+    .btn-back {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: #1e40af;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    .btn-back:hover {
+      background: #1e3a8a;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Hero -->
+  <section class="hero-oval text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center gap-4 mb-8">
+        <img src="images/cropped-logo-oval-despachadores.webp" 
+             alt="Oval Contigo de por Vida" 
+             class="h-20 w-auto bg-white rounded-2xl p-3 shadow-xl">
+        <div>
+          <h1 class="text-5xl font-black tracking-wider">OVAL</h1>
+          <p class="text-xl font-medium">Contigo de por Vida · Dispensadores y Soluciones Higiénicas</p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden">
+        <div class="bg-blue-800 text-white py-6 px-8">
+          <h2 class="text-3xl font-bold flex items-center gap-3">
+            <i class="fas fa-pump-soap"></i>
+            Productos Más Representativos Oval
+          </h2>
+        </div>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="table-header border-b">
+                <th class="py-5 px-6 text-left font-semibold">Categoría</th>
+                <th class="py-5 px-6 text-left font-semibold">Producto</th>
+                <th class="py-5 px-6 text-left font-semibold">Descripción</th>
+                <th class="py-5 px-6 text-center font-semibold">Uso Principal</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y text-gray-700">
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Dispensadores de Jabón</td>
+                <td class="py-5 px-6">Dispensador de Jabón Líquido Oval</td>
+                <td class="py-5 px-6 text-sm">Sistema de dosificación precisa y resistente a la corrosión</td>
+                <td class="py-5 px-6 text-center">Baños comerciales e institucionales</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Dispensadores de Jabón</td>
+                <td class="py-5 px-6">Dispensador de Jabón en Espuma Oval</td>
+                <td class="py-5 px-6 text-sm">Genera espuma de alta calidad con bajo consumo de producto</td>
+                <td class="py-5 px-6 text-center">Oficinas, restaurantes y hoteles</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Toallas de Papel</td>
+                <td class="py-5 px-6">Dispensador de Toallas de Papel Oval</td>
+                <td class="py-5 px-6 text-sm">Compatible con toallas multifold y rollos, alto rendimiento</td>
+                <td class="py-5 px-6 text-center">Áreas de alto tráfico</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Papel Higiénico</td>
+                <td class="py-5 px-6">Dispensador de Papel Higiénico Jumbo Oval</td>
+                <td class="py-5 px-6 text-sm">Soporta rollos jumbo, reduce cambios frecuentes</td>
+                <td class="py-5 px-6 text-center">Baños públicos e industriales</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Gel Antibacterial</td>
+                <td class="py-5 px-6">Dispensador de Gel Antibacterial Oval</td>
+                <td class="py-5 px-6 text-sm">Diseño ergonómico y dosificación controlada</td>
+                <td class="py-5 px-6 text-center">Entradas, oficinas y áreas comunes</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Línea Completa</td>
+                <td class="py-5 px-6">Kit Integral de Baños Oval</td>
+                <td class="py-5 px-6 text-sm">Solución completa de dispensadores para baños profesionales</td>
+                <td class="py-5 px-6 text-center">Empresas, escuelas e instituciones</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-gray-100 px-8 py-6 text-center text-sm text-gray-600">
+          <p>✓ Marca mexicana con garantía y soporte técnico</p>
+          <p class="mt-1">Distribuidos por <strong>Jilo Service en Aguascalientes</strong></p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://wa.me/5214494382751?text=Hola,%20quiero%20información%20de%20productos%20Oval%20Contigo%20de%20por%20Vida" 
+           target="_blank"
+           class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 transition text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          Cotizar Productos Oval
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón flotante de regreso -->
+  <a href="index.html" 
+     class="btn-back" 
+     title="Regresar al Inicio">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    <p>© 2026 Jilo Service - Distribuidor Autorizado Oval Contigo de por Vida en Aguascalientes</p>
+  </footer>
+
+</body>
+</html>
