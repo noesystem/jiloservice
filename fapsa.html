@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAPSA - 45 años haciendo un gran papel | Jilo Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+    }
+
+    .hero-fapsa { 
+      background: linear-gradient(rgba(135, 206, 250, 0.65), rgba(70, 130, 180, 0.75)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
+      background-size: cover; 
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    .table-header {
+      background-color: rgba(255,255,255,0.95);
+      color: #1e40af;
+    }
+
+    /* Botón flotante de regreso */
+    .btn-back {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: #1e40af;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+    }
+    .btn-back:hover {
+      background: #1e3a8a;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Hero -->
+  <section class="hero-fapsa text-white py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex items-center gap-4 mb-8">
+        <img src="images/Fapsa_300x300-100x100.webp" 
+             alt="FAPSA" 
+             class="h-20 w-auto bg-white rounded-2xl p-3 shadow-xl">
+        <div>
+          <h1 class="text-5xl font-black tracking-wider">FAPSA</h1>
+          <p class="text-xl font-medium">45 años haciendo un gran papel</p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden">
+        <div class="bg-blue-800 text-white py-6 px-8">
+          <h2 class="text-3xl font-bold flex items-center gap-3">
+            <i class="fas fa-toilet-paper"></i>
+            Productos Más Representativos FAPSA
+          </h2>
+        </div>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="table-header border-b">
+                <th class="py-5 px-6 text-left font-semibold">Categoría</th>
+                <th class="py-5 px-6 text-left font-semibold">Producto</th>
+                <th class="py-5 px-6 text-left font-semibold">Descripción</th>
+                <th class="py-5 px-6 text-center font-semibold">Uso Principal</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y text-gray-700">
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Papel Higiénico</td>
+                <td class="py-5 px-6">Papel Higiénico Jumbo FAPSA</td>
+                <td class="py-5 px-6 text-sm">Rollo de gran capacidad, alto rendimiento y excelente absorción</td>
+                <td class="py-5 px-6 text-center">Baños de alto tráfico</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Papel Higiénico</td>
+                <td class="py-5 px-6">Papel Higiénico PreCut FAPSA</td>
+                <td class="py-5 px-6 text-sm">Sistema precortado para mayor higiene y control de consumo</td>
+                <td class="py-5 px-6 text-center">Oficinas e instituciones</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Toallas de Papel</td>
+                <td class="py-5 px-6">Toalla en Rollo FAPSA</td>
+                <td class="py-5 px-6 text-sm">Alta absorción y resistencia, ideal para secado de manos</td>
+                <td class="py-5 px-6 text-center">Baños y áreas de servicio</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Toallas de Papel</td>
+                <td class="py-5 px-6">Toalla Interdoblada FAPSA</td>
+                <td class="py-5 px-6 text-sm">Compatible con dispensadores universales, hoja por hoja</td>
+                <td class="py-5 px-6 text-center">Lavabos y áreas de comida</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Servilletas</td>
+                <td class="py-5 px-6">Servilletas FAPSA</td>
+                <td class="py-5 px-6 text-sm">Suaves, absorbentes y de excelente presentación</td>
+                <td class="py-5 px-6 text-center">Restaurantes y cafeterías</td>
+              </tr>
+              <tr class="hover:bg-blue-50 transition">
+                <td class="py-5 px-6 font-medium">Línea Institucional</td>
+                <td class="py-5 px-6">Kit Completo FAPSA</td>
+                <td class="py-5 px-6 text-sm">Solución integral de papel para baños profesionales</td>
+                <td class="py-5 px-6 text-center">Empresas, escuelas y hoteles</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-gray-100 px-8 py-6 text-center text-sm text-gray-600">
+          <p>✓ 45 años de experiencia fabricando papel de calidad</p>
+          <p class="mt-1">Distribuidos por <strong>Jilo Service en Aguascalientes</strong></p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://wa.me/5214494382751?text=Hola,%20quiero%20información%20de%20productos%20FAPSA" 
+           target="_blank"
+           class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 transition text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          Cotizar Productos FAPSA
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botón flotante de regreso -->
+  <a href="index.html" 
+     class="btn-back" 
+     title="Regresar al Inicio">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    <p>© 2026 Jilo Service - Distribuidor Autorizado FAPSA en Aguascalientes</p>
+  </footer>
+
+</body>
+</html>
