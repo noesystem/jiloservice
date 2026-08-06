@@ -46,91 +46,91 @@
     }
 
     /* ===== CARRUSEL INFINITO + TOOLTIPS ARRIBA ===== */
-    .carousel-container {
-      margin-top: 15px;
-      overflow: hidden;
-      width: 100%;
-      padding-top: 20px;      /* Aumentado */
-      padding-bottom: 10px;
-    }
-    
-     
-    .carousel-track {
-      display: flex;
-      width: max-content;
-      animation: scrollHorizontal 25s linear infinite;
-      gap: 30px;
-      align-items: center;
-    }
-    
-    .carousel-track:hover { 
-      animation-play-state: paused; 
-    }
+/* ===== CARRUSEL INFINITO + TOOLTIPS ARRIBA (VERSIÓN MEJORADA) ===== */
+.carousel-container {
+  margin-top: 30px;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 70px;          /* Espacio generoso para tooltips */
+  padding-bottom: 15px;
+  position: relative;
+}
 
-    .brand-item {
-      position: relative;
-      display: flex;
-      align-items: center;
-      height: 95px;
-      flex-shrink: 0;
-    }
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollHorizontal 25s linear infinite;
+  gap: 30px;
+  align-items: center;
+}
 
-    .carousel-track img {
-      height: 95px;
-      width: auto;
-      max-width: 170px;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-      transition: all 0.4s ease;
-    }
+.carousel-track:hover {
+  animation-play-state: paused;
+}
 
-    .carousel-track img:hover {
-      transform: scale(1.06);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-    }
+.brand-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 95px;
+  flex-shrink: 0;
+}
 
-    @keyframes scrollHorizontal {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+.carousel-track img {
+  height: 95px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  transition: all 0.4s ease;
+}
 
-    /* Tooltips ARRIBA */
-    .brand-tooltip {
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-      bottom: 115%;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #001F3F;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      z-index: 30;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-      transition: all 0.25s ease;
-      pointer-events: none;
-    }
+.carousel-track img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
 
-    .brand-tooltip::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -6px;
-      border: 6px solid transparent;
-      border-top-color: #001F3F;
-    }
+@keyframes scrollHorizontal {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-    .brand-item:hover .brand-tooltip {
-      visibility: visible;
-      opacity: 1;
-      bottom: 125%;
-    }
+/* TOOLTIPS ARRIBA - Versión reforzada */
+.brand-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #001F3F;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  z-index: 50 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
 
+.brand-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border: 6px solid transparent;
+  border-top-color: #001F3F;
+}
+
+.brand-item:hover .brand-tooltip {
+  visibility: visible;
+  opacity: 1;
+  bottom: 130%;
+}
     .logo-nav {
       transition: transform 0.3s ease;
     }
