@@ -46,91 +46,91 @@
     }
 
     /* ===== CARRUSEL INFINITO + TOOLTIPS ARRIBA ===== */
-/* ===== CARRUSEL INFINITO + TOOLTIPS ARRIBA (VERSIÓN MEJORADA) ===== */
-.carousel-container {
-  margin-top: 10px;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 70px;          /* Espacio generoso para tooltips */
-  padding-bottom: 10px;
-  position: relative;
-}
+    .carousel-container {
+      margin-top: 10px;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 70px;
+      padding-bottom: 10px;
+      position: relative;
+    }
 
-.carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scrollHorizontal 25s linear infinite;
-  gap: 30px;
-  align-items: center;
-}
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scrollHorizontal 25s linear infinite;
+      gap: 30px;
+      align-items: center;
+    }
 
-.carousel-track:hover {
-  animation-play-state: paused;
-}
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
 
-.brand-item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 95px;
-  flex-shrink: 0;
-}
+    .brand-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 95px;
+      flex-shrink: 0;
+    }
 
-.carousel-track img {
-  height: 95px;
-  width: auto;
-  max-width: 170px;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-  transition: all 0.4s ease;
-}
+    .carousel-track img {
+      height: 95px;
+      width: auto;
+      max-width: 170px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      transition: all 0.4s ease;
+    }
 
-.carousel-track img:hover {
-  transform: scale(1.06);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-}
+    .carousel-track img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
 
-@keyframes scrollHorizontal {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
+    @keyframes scrollHorizontal {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
-/* TOOLTIPS ARRIBA - Versión reforzada */
-.brand-tooltip {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  bottom: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #001F3F;
-  color: white;
-  padding: 9px 16px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  z-index: 50 !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  transition: all 0.25s ease;
-  pointer-events: none;
-}
+    /* TOOLTIPS ARRIBA */
+    .brand-tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #001F3F;
+      color: white;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      z-index: 50 !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
 
-.brand-tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -6px;
-  border: 6px solid transparent;
-  border-top-color: #001F3F;
-}
+    .brand-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -6px;
+      border: 6px solid transparent;
+      border-top-color: #001F3F;
+    }
 
-.brand-item:hover .brand-tooltip {
-  visibility: visible;
-  opacity: 1;
-  bottom: 130%;
-}
+    .brand-item:hover .brand-tooltip {
+      visibility: visible;
+      opacity: 1;
+      bottom: 130%;
+    }
+
     .logo-nav {
       transition: transform 0.3s ease;
     }
@@ -159,6 +159,95 @@
       background-color: #9ca3af !important;
       cursor: not-allowed;
       opacity: 0.9;
+    }
+
+    /* ========== CUADRO TEXTO SOBRE EL LOGO ========== */
+    .logo-box-wrapper {
+      position: relative;
+      width: 220px;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) {
+      .logo-box-wrapper { width: 260px; }
+    }
+    @media (min-width: 768px) {
+      .logo-box-wrapper { width: 320px; }
+    }
+
+    #cuadro-texto-logo {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(165deg, rgba(70, 130, 180, 0.78), rgba(100, 149, 237, 0.75));
+      border-radius: 12px;
+      overflow: hidden;
+      z-index: 20;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+    #cuadro-texto-logo .cerrar-btn {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: #e0f2fe;
+      font-size: 1.4rem;
+      cursor: pointer;
+      z-index: 30;
+      line-height: 1;
+      padding: 0 4px;
+    }
+    #cuadro-texto-logo .cerrar-btn:hover {
+      color: white;
+    }
+
+    .texto-scroll-container {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+    }
+
+    .texto-scroll {
+      padding: 16px 14px;
+      color: white;
+      font-size: 0.78rem;
+      line-height: 1.50;
+      text-align: center;
+    }
+
+    /* Scroll lento */
+    .texto-scroll.animando {
+      animation: scrollTextoArriba 42s linear forwards;
+    }
+
+    .texto-scroll h4 {
+      color: #fef9c3;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 14px 0 6px;
+      letter-spacing: 0.4px;
+    }
+
+    .texto-scroll p {
+      margin: 0 0 8px;
+    }
+
+    /* 
+      Inicio rápido (15%) + final más corto (-95%)
+      → la primera línea aparece pronto y el cierre se agiliza
+    */
+    @keyframes scrollTextoArriba {
+      0% {
+        transform: translateY(15%);
+      }
+      100% {
+        transform: translateY(-95%);
+      }
     }
   </style>
 </head>
@@ -202,15 +291,42 @@
         DISTRIBUIDORA
       </h1>
 
-<!-- contenido mision vision y valores-->
+      <!-- ========== LOGO + CUADRO DE TEXTO SUPERPUESTO ========== -->
       <div class="flex justify-center mb-4">
-        <img src="images/logojilo.jpeg" 
-             alt="Jilo Service" 
-             class="w-[220px] sm:w-[260px] md:w-[320px] h-auto drop-shadow-2xl">
+        <div class="logo-box-wrapper">
+          <img src="images/logojilo.jpeg" 
+               alt="Jilo Service" 
+               class="w-full h-auto drop-shadow-2xl block">
+
+          <div id="cuadro-texto-logo">
+            <button class="cerrar-btn" onclick="cerrarCuadroTexto()" title="Cerrar">×</button>
+
+            <div class="texto-scroll-container">
+              <div class="texto-scroll" id="textoScroll">
+                <h4>NOSOTROS</h4>
+                <p>JILO SERVICE ES UNA EMPRESA 100% MEXICANA FUNDADA EN 2020 QUE DISTRIBUYE LAS MEJORES Y MÁS CONFIABLES MARCAS DEL RAMO. UBICADA EN AGUASCALIENTES Y ESPECIALIZADA EN PROVEER DE FORMA INTEGRAL PRODUCTOS DE LIMPIEZA Y SUS DERIVADOS ASÍ COMO EQUIPO DE PROTECCIÓN PERSONAL PARA LOS DIFERENTES SECTORES EMPRESARIALES DEL ESTADO.</p>
+
+                <h4>MISIÓN</h4>
+                <p>POSICIONAR A JILO SERVICE COMO LA MEJOR OPCIÓN Y ALTERNATIVA EN LA ENTIDAD EN LA DISTRIBUCIÓN DE PRODUCTOS DE LIMPIEZA Y SUS DERIVADOS ASÍ COMO EQUIPO DE PROTECCIÓN PERSONAL.</p>
+
+                <h4>VISIÓN</h4>
+                <p>SER UNA EMPRESA LÍDER EN EL MERCADO A NIVEL ESTATAL Y REGIONAL DE SUMINISTROS DE LIMPIEZA Y DERIVADOS SIEMPRE CON EL MEJOR SERVICIO Y ACTITUD DE RESOLUCIÓN DE ÁREAS DE OPORTUNIDAD PARA UNA TOTAL SATISFACCIÓN DE NUESTROS SOCIOS COMERCIALES.</p>
+
+                <h4>OBJETIVO</h4>
+                <p>EN JILO SERVICE ENTENDEMOS QUE LA LIMPIEZA Y LA SEGURIDAD SON BASES FUNDAMENTALES PARA LA PRODUCTIVIDAD, IMAGEN Y EFICIENCIA, POR LO CUAL NOS ENFOCAMOS EN FACILITAR DE MODO EFICIENTE TODOS LOS SUMINISTROS, SIEMPRE EN TIEMPO Y FORMA CON EL MEJOR SERVICIO Y CON EL COMPROMISO DE SATISFACER SUS NECESIDADES DE MODO PUNTUAL.</p>
+
+                <h4>VALORES</h4>
+                <p>NOSOTROS DESTACAMOS SIN DUDA LA HONESTIDAD CON LA QUE SIEMPRE SERÁN TRATADOS TODOS NUESTROS SOCIOS COMERCIALES.<br><br>
+                   SIEMPRE CON LA RESPONSABILIDAD DE AYUDAR Y RESOLVER ÁREAS DE OPORTUNIDAD DE FORMA EFICIENTE Y EFICAZ.<br><br>
+                   TRABAJANDO EN EQUIPO Y DE LA MANO DE TODOS NUESTROS COLABORADORES.<br><br>
+                   BRINDANDO SIEMPRE LA MEJOR CALIDAD Y SERVICIO PROFESIONAL.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- ========== FIN LOGO + CUADRO ========== -->
 
-
-      
       <p class="text-lg sm:text-xl mb-5 font-medium max-w-xl mx-auto">
         Suministros de Limpieza para Industria y Hogar en Aguascalientes
       </p>
@@ -451,6 +567,7 @@
   </footer>
 
   <script>
+    // Menú móvil
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -468,6 +585,30 @@
         icon.classList.add('fa-bars');
         icon.classList.remove('fa-times');
       });
+    });
+
+    // ========== CONTROL DEL CUADRO DE TEXTO ==========
+    function cerrarCuadroTexto() {
+      const cuadro = document.getElementById('cuadro-texto-logo');
+      if (cuadro) {
+        cuadro.style.transition = 'opacity 0.35s ease';
+        cuadro.style.opacity = '0';
+        setTimeout(() => {
+          cuadro.style.display = 'none';
+        }, 350);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const textoScroll = document.getElementById('textoScroll');
+
+      // Inicia de inmediato
+      textoScroll.classList.add('animando');
+
+      // Cierre automático cuando termina la animación
+      textoScroll.addEventListener('animationend', function() {
+        cerrarCuadroTexto();
+      }, { once: true });
     });
   </script>
 </body>
