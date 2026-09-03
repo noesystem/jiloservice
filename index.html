@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ===== SEO OPTIMIZADO ===== -->
+  <title>Productos de Limpieza y EPP en Aguascalientes (Cleaning Products) | Jilo Service Distribuidora</title>
+  <meta name="description" content="Distribuidora de productos de limpieza industrial y hogar en Aguascalientes. Marcas Rubbermaid, Wiese, Kleenex, Fapsa, Dust y más. Cotiza suministros de limpieza y equipo de protección personal por WhatsApp.">
+  <meta name="keywords" content="productos de limpieza Aguascalientes, distrubidor de marcas de limpieza, suministros de limpieza, EPP Aguascalientes, Rubbermaid, Wiese, Fapsa">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jiloservice.com/">
+
+  <!-- Open Graph (para redes sociales) -->
+  <meta property="og:title" content="Productos de Limpieza y EPP en Aguascalientes (Cleaning products) | Jilo Service">
+  <meta property="og:description" content="Distribuidora de suministros de limpieza industrial y hogar en Aguascalientes. Marcas líderes. Cotiza por WhatsApp.">
+  <meta property="og:url" content="https://jiloservice.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jiloservice.com/images/logojilo.jpeg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Schema LocalBusiness (importante para SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Jilo Service",
+    "image": "https://jiloservice.com/images/logojilo.jpeg",
+    "description": "Distribuidora de productos de limpieza industrial (Cleaning products), hogar y equipo de protección personal (EPP) en Aguascalientes.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aguascalientes",
+      "addressRegion": "Aguascalientes",
+      "addressCountry": "MX"
+    },
+    "url": "https://jiloservice.com",
+    "telephone": "+524494382751",
+    "priceRange": "$$",
+    "areaServed": "Aguascalientes"
+  }
+  </script>
+
+  <style>
+    body { 
+      font-family: 'Segoe UI', system-ui, sans-serif; 
+    }
+
+    /* Hero - Azul Cielo */
+    .hero { 
+      background: linear-gradient(rgba(135, 206, 250, 0.65), rgba(70, 130, 180, 0.75)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a6a0358330e6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
+      background-size: cover; 
+      background-position: center;
+      padding-top: 65px;     
+      padding-bottom: 25px;  
+      min-height: 85vh;      
+    }
+
+    .hero-title {
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      letter-spacing: 4px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .nav-link {
+      transition: all 0.3s;
+    }
+    .nav-link:hover {
+      color: #4ade80;
+    }
+
+    .btn-whatsapp {
+      animation: blink-strong 1.5s infinite;
+    }
+    @keyframes blink-strong {
+      0%, 100% { color: white; background-color: #25D366; }
+      50% { color: #86efac; background-color: #15803d; }
+    }
+
+    /* ===== CARRUSEL INFINITO + TOOLTIPS ARRIBA ===== */
+    .carousel-container {
+      margin-top: 10px;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 70px;
+      padding-bottom: 10px;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scrollHorizontal 25s linear infinite;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    .brand-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 95px;
+      flex-shrink: 0;
+    }
+
+    .carousel-track img {
+      height: 95px;
+      width: auto;
+      max-width: 170px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+      transition: all 0.4s ease;
+    }
+
+    .carousel-track img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    }
+
+    @keyframes scrollHorizontal {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* TOOLTIPS ARRIBA */
+    .brand-tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #001F3F;
+      color: white;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      z-index: 50 !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
+
+    .brand-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -6px;
+      border: 6px solid transparent;
+      border-top-color: #001F3F;
+    }
+
+    .brand-item:hover .brand-tooltip {
+      visibility: visible;
+      opacity: 1;
+      bottom: 130%;
+    }
+
+    .logo-nav {
+      transition: transform 0.3s ease;
+    }
+    .logo-nav:hover {
+      transform: scale(1.08);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .btn-disabled {
+      background-color: #9ca3af !important;
+      cursor: not-allowed;
+      opacity: 0.9;
+    }
+
+    /* ========== CUADRO TEXTO SOBRE EL LOGO ========== */
+    .logo-box-wrapper {
+      position: relative;
+      width: 220px;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) {
+      .logo-box-wrapper { width: 260px; }
+    }
+    @media (min-width: 768px) {
+      .logo-box-wrapper { width: 320px; }
+    }
+
+    #cuadro-texto-logo {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(165deg, rgba(70, 130, 180, 0.78), rgba(100, 149, 237, 0.75));
+      border-radius: 12px;
+      overflow: hidden;
+      z-index: 20;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+    }
+
+    #cuadro-texto-logo .cerrar-btn {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      color: #e0f2fe;
+      font-size: 1.4rem;
+      cursor: pointer;
+      z-index: 30;
+      line-height: 1;
+      padding: 0 4px;
+    }
+    #cuadro-texto-logo .cerrar-btn:hover {
+      color: white;
+    }
+
+    .texto-scroll-container {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+    }
+
+    .texto-scroll {
+      padding: 16px 14px;
+      color: white;
+      font-size: 0.78rem;
+      line-height: 1.50;
+      text-align: center;
+    }
+
+    .texto-scroll.animando {
+      animation: scrollTextoArriba 42s linear forwards;
+    }
+
+    .texto-scroll h4 {
+      color: #fef9c3;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin: 14px 0 6px;
+      letter-spacing: 0.4px;
+    }
+
+    .texto-scroll p {
+      margin: 0 0 8px;
+    }
+
+    @keyframes scrollTextoArriba {
+      0% {
+        transform: translateY(15%);
+      }
+      100% {
+        transform: translateY(-95%);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Menú Superior Responsive -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="ofertas.html" class="flex items-center gap-2 logo-nav" title="Ver Ofertas de la Semana">
+          <img src="images/logojilo.jpeg" alt="Jilo Service - Distribuidora de productos de limpieza Aguascalientes" class="h-9 w-auto">
+        </a>
+
+        <div class="hidden md:flex gap-8 text-lg font-medium">
+          <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
+          <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
+          <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
+          <a href="ofertas.html" class="nav-link text-orange-600 font-semibold hover:text-orange-700">Ofertas Semanales 🔥</a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden text-3xl text-gray-700">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t">
+        <div class="flex flex-col gap-4 text-lg font-medium">
+          <a href="#" class="nav-link text-gray-700 hover:text-green-500">Inicio</a>
+          <a href="#productos" class="nav-link text-gray-700 hover:text-green-500">Productos</a>
+          <a href="#contacto" class="nav-link text-gray-700 hover:text-green-500">Contacto</a>
+          <a href="ofertas.html" class="nav-link text-orange-600 font-semibold">Ofertas Semanales 🔥</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero text-white text-center">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <!-- H1 OPTIMIZADO PARA SEO -->
+      <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl mb-3 leading-tight">
+        PRODUCTOS DE LIMPIEZA<br class="hidden sm:block"> Y EPP EN AGUASCALIENTES
+      </h1>
+
+      <p class="text-lg sm:text-xl mb-2 font-medium max-w-2xl mx-auto">
+        Distribuidora de suministros de limpieza industrial y hogar
+      </p>
+
+      <!-- ========== LOGO + CUADRO DE TEXTO SUPERPUESTO ========== -->
+      <div class="flex justify-center mb-4">
+        <div class="logo-box-wrapper">
+          <img src="images/logojilo.jpeg" 
+               alt="Jilo Service - Proveedor de productos de limpieza y EPP en Aguascalientes" 
+               class="w-full h-auto drop-shadow-2xl block">
+
+          <div id="cuadro-texto-logo">
+            <button class="cerrar-btn" onclick="cerrarCuadroTexto()" title="Cerrar">×</button>
+
+            <div class="texto-scroll-container">
+              <div class="texto-scroll" id="textoScroll">
+                <h4>NOSOTROS</h4>
+                <p>JILO SERVICE es una empresa 100% mexicana fundada en 2020, especializada en la distribución de productos de limpieza y equipo de protección personal (EPP) en Aguascalientes. Proveemos de forma integral las mejores marcas del mercado para industria, comercio y hogar.</p>
+
+                <h4>MISIÓN</h4>
+                <p>Posicionar a Jilo Service como la mejor opción en Aguascalientes para la distribución de productos de limpieza industrial, insumos de higiene y equipo de protección personal, ofreciendo siempre el mejor servicio.</p>
+
+                <h4>VISIÓN</h4>
+                <p>Ser la distribuidora líder de suministros de limpieza y EPP a nivel estatal y regional, reconocida por la calidad de nuestras marcas, puntualidad y atención personalizada a nuestros clientes.</p>
+
+                <h4>OBJETIVO</h4>
+                <p>Facilitar a empresas e instituciones de Aguascalientes el acceso a productos de limpieza profesionales y equipo de seguridad de manera eficiente, en tiempo y forma, contribuyendo a su productividad e imagen.</p>
+
+                <h4>VALORES</h4>
+                <p>Honestidad, responsabilidad, trabajo en equipo y compromiso total con la satisfacción de nuestros socios comerciales. Calidad y servicio profesional en cada entrega.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ========== FIN LOGO + CUADRO ========== -->
+
+      <p class="text-base sm:text-lg mb-6 font-medium max-w-xl mx-auto opacity-95">
+        Rubbermaid • Wiese • Kleenex • Fapsa • Dust • Jofel • Oval y más
+      </p>
+      
+      <a href="https://wa.me/5214494382751?text=Hola,%20quiero%20cotizar%20productos%20de%20limpieza.%20Los%20encontré%20en%20jiloservice.com" 
+         target="_blank"
+         class="btn-whatsapp inline-flex items-center gap-3 px-8 py-4 rounded-full text-lg font-semibold mx-auto shadow-xl">
+        <i class="fab fa-whatsapp text-2xl"></i> 
+        Cotizar por WhatsApp
+      </a>
+
+      <!-- Carrusel Horizontal Infinito -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- PRIMERA SERIE -->
+          <div class="brand-item">
+            <a href="wiese.html"><img src="images/logo+Wise-1920w.webp" alt="Wiese productos de limpieza y aromatizantes Aguascalientes"></a>
+            <div class="brand-tooltip">Wiese: Desinfecta, Neutraliza y Aromatiza</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="rubbermaid.html"><img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid equipos de limpieza profesional"></a>
+            <div class="brand-tooltip">Rubbermaid: Made for Work that Matters</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="kleenex.html"><img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex papel y toallas institucionales"></a>
+            <div class="brand-tooltip">Kleenex: Let it Out.</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="dust.html"><img src="images/logo+DUST-1920w.webp" alt="Dust limpieza especializada"></a>
+            <div class="brand-tooltip">Dust: Limpieza especializada</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="biotissue.html"><img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue productos ecológicos"></a>
+            <div class="brand-tooltip">BIO Tissue: Por un mundo más consciente</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="scottessential.html"><img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential papel higiénico institucional"></a>
+            <div class="brand-tooltip">Scott Essential: Calidad, valor y rendimiento confiable</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="Oval.html"><img src="images/cropped-logo-oval-despachadores.webp" alt="Oval despachadores y equipos de higiene"></a>
+            <div class="brand-tooltip">Oval: Contigo de por vida</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="fapsa.html"><img src="images/Fapsa_300x300-100x100.webp" alt="Fapsa productos químicos de limpieza"></a>
+            <div class="brand-tooltip">Fapsa: 45 años haciendo un gran papel</div>
+          </div>
+
+          <!-- SEGUNDA SERIE (Duplicado exacto) -->
+          <div class="brand-item">
+            <a href="wiese.html"><img src="images/logo+Wise-1920w.webp" alt="Wiese productos de limpieza y aromatizantes Aguascalientes"></a>
+            <div class="brand-tooltip">Wiese: Desinfecta, Neutraliza y Aromatiza</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="rubbermaid.html"><img src="images/logo+Rubbermaid-1920w.webp" alt="Rubbermaid equipos de limpieza profesional"></a>
+            <div class="brand-tooltip">Rubbermaid: Made for Work that Matters</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="kleenex.html"><img src="images/77e4dee3-fb4d-4148-8cc8-251f1e5f2c3b-1920w.webp" alt="Kleenex papel y toallas institucionales"></a>
+            <div class="brand-tooltip">Kleenex: Let it Out.</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="dust.html"><img src="images/logo+DUST-1920w.webp" alt="Dust limpieza especializada"></a>
+            <div class="brand-tooltip">Dust: Limpieza especializada</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="biotissue.html"><img src="images/e5fee3b3-6f0d-46ae-8af5-31dc97c1d0ac-1920w.webp" alt="BIO Tissue productos ecológicos"></a>
+            <div class="brand-tooltip">BIO Tissue: Por un mundo más consciente</div>
+          </div>
+          
+          <div class="brand-item">
+            <a href="scottessential.html"><img src="images/Image-Scott+Escential-1920w.webp" alt="Scott Essential papel higiénico institucional"></a>
+            <div class="brand-tooltip">Scott Essential: Calidad, valor y rendimiento confiable</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="Oval.html"><img src="images/cropped-logo-oval-despachadores.webp" alt="Oval despachadores y equipos de higiene"></a>
+            <div class="brand-tooltip">Oval: Contigo de por vida</div>
+          </div>
+
+          <div class="brand-item">
+            <a href="fapsa.html"><img src="images/Fapsa_300x300-100x100.webp" alt="Fapsa productos químicos de limpieza"></a>
+            <div class="brand-tooltip">Fapsa: 45 años haciendo un gran papel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section id="productos" class="py-16 bg-orange-500 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-bold text-center mb-4">Nuestros Proveedores de Productos de Limpieza</h2>
+      <p class="text-center text-orange-100 mb-12 text-lg">Descarga los catálogos oficiales en PDF de las mejores marcas</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Mantuve todos los cards igual, solo mejoré un poco los textos -->
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CatalogoFAPSA.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">FAPSA</h3>
+          <p class="text-gray-600 mb-4">Productos químicos y limpieza profesional</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO-SABLON.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">SABLÓN</h3>
+          <p class="text-gray-600 mb-4">Línea completa de productos de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ambiderm+%281%29.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">AMBIDERM</h3>
+          <p class="text-gray-600 mb-4">Soluciones industriales y EPP</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogELITE.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">ELITE</h3>
+          <p class="text-gray-600 mb-4">Productos premium de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CFSBrands_Catalogo2026_LOW.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JOFEL</h3>
+          <p class="text-gray-600 mb-4">Dispensadores y accesorios</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+EL+CASTOR.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">JARCIERÍA EL CASTOR</h3>
+          <p class="text-gray-600 mb-4">Jarciería y herramientas de limpieza</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/CATALOGO_DUST_COINTER.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">DUST</h3>
+          <p class="text-gray-600 mb-4">Limpieza especializada profesional</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/50cdce84/files/uploaded/catalogo+Ruberbermaid.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">RUBBERMAID</h3>
+          <p class="text-gray-600 mb-4">Equipos y herramientas profesionales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://silym.com.mx/wp-content/uploads/2024/02/CATALOGO-WIESE-1.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">WIESE</h3>
+          <p class="text-gray-600 mb-4">Sanitizantes, neutralizadores de olores y fragancias ambientales</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+
+        <a href="https://irp.cdn-website.com/1901b6bd/files/uploaded/Cat%C3%A1logo+OVAL+2026+-+digital.pdf" target="_blank" class="group bg-white text-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-2xl transition hover:-translate-y-1">
+          <h3 class="font-bold text-xl mb-3">OVAL</h3>
+          <p class="text-gray-600 mb-4">Despachadores, cubetas, carros conserje e insumos de higiene</p>
+          <span class="text-orange-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition">
+            Ver Catálogo PDF <i class="fas fa-arrow-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="bg-gray-900 text-white py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <div class="text-center md:text-left">
+          <h2 class="text-4xl font-bold mb-4">¿Necesitas una cotización de productos de limpieza?</h2>
+          <p class="mb-10 text-gray-400">Contáctanos en Aguascalientes y te responderemos rápidamente por WhatsApp</p>
+
+          <form id="contactForm" class="max-w-lg mx-auto md:mx-0 space-y-6">
+            <input type="text" placeholder="Nombre completo" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500">
+            <textarea placeholder="Cuéntanos qué productos de limpieza o EPP necesitas..." rows="5" class="w-full p-5 rounded-2xl bg-gray-800 border border-gray-700 focus:outline-none focus:border-green-500"></textarea>
+            
+            <button type="button" disabled class="btn-disabled w-full py-6 rounded-2xl font-semibold text-xl flex items-center justify-center gap-2">
+              <i class="fas fa-clock"></i>
+              Enviar mensaje (Próximamente)
+            </button>
+          </form>
+        </div>
+
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold mb-6">También puedes visitarnos escaneando</h3>
+          
+          <div class="inline-block bg-white p-4 rounded-3xl shadow-2xl">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=https://jiloservice.com/ofertas.html" 
+                 alt="Código QR Jilo Service productos de limpieza Aguascalientes" 
+                 class="rounded-2xl">
+          </div>
+          
+          <p class="text-gray-400 mt-6 text-sm">
+            Escanea y accede rápidamente a nuestro sitio web<br>
+            <strong class="text-white">https://jiloservice.com</strong>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/5214494382751?text=Hola,%20quiero%20cotizar%20productos%20de%20limpieza" target="_blank" class="whatsapp-float" aria-label="Cotizar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="bg-gray-950 text-gray-500 py-10 text-center">
+    <p class="mb-2">
+      <strong class="text-gray-300">Jilo Service</strong> - Distribuidora de Productos de Limpieza y EPP en Aguascalientes
+    </p>
+    <p>Copyright © 2026 Jilo Service - Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-times');
+      });
+    });
+
+    // ========== CONTROL DEL CUADRO DE TEXTO ==========
+    function cerrarCuadroTexto() {
+      const cuadro = document.getElementById('cuadro-texto-logo');
+      if (cuadro) {
+        cuadro.style.transition = 'opacity 0.35s ease';
+        cuadro.style.opacity = '0';
+        setTimeout(() => {
+          cuadro.style.display = 'none';
+        }, 350);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const textoScroll = document.getElementById('textoScroll');
+
+      // Inicia de inmediato
+      textoScroll.classList.add('animando');
+
+      // Cierre automático cuando termina la animación
+      textoScroll.addEventListener('animationend', function() {
+        cerrarCuadroTexto();
+      }, { once: true });
+    });
+  </script>
+</body>
+</html>
